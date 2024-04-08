@@ -1,0 +1,15 @@
+{
+  "name": "framework_new",
+  "version": "1.0.0",
+  "description": "Creating framework based on JS Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "allure-playwright": "^2.15.0"
+  }
+}
