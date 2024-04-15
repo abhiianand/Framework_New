@@ -1,0 +1,18 @@
+{
+    "memberUser" : {
+        "name" : "matt@ex.co",
+        "password" : "pass"
+    },
+    "specialistUser" : {
+        "name" : "peter@ex.co",
+        "password" : "pass"
+    },
+    "summusPartnerUser" : {
+        "name" : "partner@ex.co",
+        "password" : "pass"
+    },
+    "summusAdminUser":{
+        "name": "admin@ex.co",
+        "password":"pass"
+    }
+}
