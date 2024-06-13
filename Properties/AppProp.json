@@ -1,5 +1,6 @@
 {
-    "appURI" : "https://qa-1.summusglobal.com/",
+    "appURI" : "https://automationexercise.com",
+    "appURI2":"https://qa-1.summusglobal.com/",
     "timeout" : {
         "min" : 10000,
         "max" : 40000

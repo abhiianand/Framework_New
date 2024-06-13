@@ -22,7 +22,7 @@ test.describe.serial("Summus Operations User creation ", async() => {
  })
 let SummusLoc= new  Summus_Locator(page); 
 await test.step("User naviagtes to the website",async() => {
-    await page.goto(AppProp.appURI)
+    await page.goto(AppProp.appURI2)
     await expect(page).toHaveTitle(Summus_Label.Title.LOGIN, {timeout : AppProp.timeout.min})
 })
 await test.step("User is able to login to the platform",async () =>{

@@ -4,7 +4,7 @@ export default class Summus_Locator{
         // this.Inputemailaddress="//input[@id='username']"
         // this.button="//button[@type='submit']"
         // this.inputpassword="//input[@id='password']"
-        this.page=page;
+        this.page=page
         this.Inputemailaddress="//input[@id='username']"
         this.button="//button[@type='submit']"
         this.inputpassword="//input[@id='password']"
@@ -84,14 +84,14 @@ export default class Summus_Locator{
  
     }
 
-}
-generateRandomEmail() {
+
+async generateRandomEmail() {
     const randomString = Math.random().toString(36).substring(7); 
     const email = `${randomString}@yopmail.com`;
     return email;
 }
 
-     Loginuser(username, password){
+ async Loginuser(username, password){
         await this.page.locator(this.Inputemailaddress).fill(username);
         await this.page.locator(this.button).click();
         await this.page.locator(this.inputpassword).fill(password);
@@ -99,7 +99,7 @@ generateRandomEmail() {
         await this.page.waitForLoadState('domcontentloaded');
  
     }
-    FetchTextContentinArray(locator){
+    async FetchTextContentinArray(locator){
 
         let userdata= await this.page.locator(this.locator).all()    
         let arr_everything=[];
@@ -110,14 +110,9 @@ generateRandomEmail() {
         }
         return arr_everything;
     }
-    getUrlParameter(page, parameterName) {
+   async getUrlParameter(page, parameterName) {
         const url = await page.url();
         const urlParams = new URLSearchParams(new URL(url).search);
         return urlParams.get(parameterName);
-    }
-
-    
-    
-    
-    
+    }   
 }
