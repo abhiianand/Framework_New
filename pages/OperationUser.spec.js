@@ -16,7 +16,7 @@ let browser;
 test.describe.serial("Summus Operations User creation ", async() => {
  test("ST_357 Verify admin can successfully create a Summus Operations User. @aa", async () =>{
     await test.step("User creates a context",async() =>{
-    browser=await chromium.launch({headless:false});
+    browser=await chromium.launch({headless:true});
     context= await browser.newContext();
     page=await context.newPage();
  })
@@ -123,13 +123,13 @@ await test.step("Closing the context",async()=>{
 })
 test('ST_358 -Verify for Operations User: cannot create a case ,no action items available on dashboard, cannot delete cases, cannot open any cases & cannot access any member profile @aa', async () =>{
     await test.step("User creates a context",async() =>{
-    browser=await chromium.launch({headless:false});
+    browser=await chromium.launch({headless:true});
     context= await browser.newContext();
     page=await context.newPage();
  })
     let SummusLoc= new  Summus_Locator(page);
     await test.step("Operation User is getting logged in",async()=>{
-    await page.goto(AppProp.appURI)
+    await page.goto(AppProp.appURI2)
     await SummusLoc.Loginuser(OperationUser.Userdata.EMAIL,OperationUser.Userdata.NEW_USER_PASSWORD);
     await expect(page).toHaveTitle(PageTitles.Title.HOME, {timeout : AppProp.timeout.max})
 })
@@ -172,13 +172,13 @@ await test.step("Closing the context",async()=>{
 test('ST_359 -Verify Case Management, Account Management, Invoice Management, Pricing, Physician Recruitment & Data Cleanup options are available for Operation User @aa', async () =>{
     let admin_option= ["Case Management","Account Management","Data Cleanup","Invoice Management","Physician Recruitment","Payment Approval"]
     await test.step("User creates a context",async() =>{
-    browser=await chromium.launch({headless:false});
+    browser=await chromium.launch({headless:true});
     context= await browser.newContext();
     page=await context.newPage();
  })
     let SummusLoc= new  Summus_Locator(page);
     await test.step("Operation User is getting logged in",async()=>{
-    await page.goto(AppProp.appURI)
+    await page.goto(AppProp.appURI2)
     await SummusLoc.Loginuser(OperationUser.Userdata.EMAIL,OperationUser.Userdata.NEW_USER_PASSWORD);
     await expect(page).toHaveTitle(PageTitles.Title.HOME, {timeout : AppProp.timeout.max})
 })
@@ -234,13 +234,13 @@ await test.step("Closing the context",async()=>{
 test("ST_360 - Verify operations user can only create Specialists, Non-MD Providers, Pharmacists, and Orgs @aa",async()=>{
     let typeOfPerson=["Specialist","Non-MD Provider","Pharmacist"]
     await test.step("User creates a context",async() =>{
-        browser=await chromium.launch({headless:false});
+        browser=await chromium.launch({headless:true});
         context= await browser.newContext();
         page=await context.newPage();
      })
      let SummusLoc= new  Summus_Locator(page);
      await test.step("Operation User is getting logged in",async()=>{
-     await page.goto(AppProp.appURI)
+     await page.goto(AppProp.appURI2)
      await SummusLoc.Loginuser(OperationUser.Userdata.EMAIL,OperationUser.Userdata.NEW_USER_PASSWORD);
      await expect(page).toHaveTitle(PageTitles.Title.HOME, {timeout : AppProp.timeout.max})
  })     
@@ -274,13 +274,13 @@ await test.step("Closing the context",async()=>{
 })
 test("ST_511 - Verify  user an create/edit/delete Departments in Hospital Admin page",async()=>{
     await test.step("User creates a context",async() =>{
-        browser=await chromium.launch({headless:false});
+        browser=await chromium.launch({headless:true});
         context= await browser.newContext();
         page=await context.newPage();
      })
      let SummusLoc= new  Summus_Locator(page);
      await test.step("Operation User is getting logged in",async()=>{
-     await page.goto(AppProp.appURI)
+     await page.goto(AppProp.appURI2)
      await SummusLoc.Loginuser(OperationUser.Userdata.PARTNER_USER_EMAIL,OperationUser.Userdata.PARTNER_USER_PASS);
      await expect(page).toHaveTitle(PageTitles.Title.HOME, {timeout : AppProp.timeout.max})
      await page.waitForLoadState('domcontentloaded')

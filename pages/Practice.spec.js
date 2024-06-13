@@ -16,7 +16,7 @@ let Email
 let Name
 test.beforeAll("Creating Account",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -57,7 +57,7 @@ test.beforeAll("Creating Account",async()=>{
 })
 test("SN_1 Register User",async()=>{  
 await test.step("User creates a context",async()=>{
-   browser=await chromium.launch({headless:false});
+   browser=await chromium.launch({headless:true});
    context= await browser.newContext();
    page=await context.newPage();
  })
@@ -132,7 +132,7 @@ await test.step("Closing context",async()=>{
 })
 test("SN_2  Login User with correct email and password",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -172,7 +172,7 @@ test("SN_2  Login User with correct email and password",async()=>{
 })
 test("SN_3 Login User with incorrect email and password",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -207,7 +207,7 @@ test("SN_3 Login User with incorrect email and password",async()=>{
 })
 test("SN_4 Logout User",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -245,7 +245,7 @@ test("SN_4 Logout User",async()=>{
 })
 test("SN_5 Register User with existing email",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -276,7 +276,7 @@ await expect(await page.locator(Prac.EmailAlreadyExist)).toBeVisible()
 })
 test("SN_6 Contact Us Form",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -330,7 +330,7 @@ test("SN_6 Contact Us Form",async()=>{
 })
 test("SN_7 Verify Test Cases Page",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -350,7 +350,7 @@ test("SN_7 Verify Test Cases Page",async()=>{
 })
 test("SN_8 Verify All Products and product detail page",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -393,7 +393,7 @@ test("SN_8 Verify All Products and product detail page",async()=>{
 })
 test("SN_9 Search Product",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -429,7 +429,7 @@ test("SN_9 Search Product",async()=>{
 })
 test("SN_10 Verify Subscription in home page",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -461,7 +461,7 @@ test("SN_10 Verify Subscription in home page",async()=>{
 })
 await test("SN_11 Verify Subscription in Cart page",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -497,7 +497,7 @@ await test("SN_11 Verify Subscription in Cart page",async()=>{
 })
 test("SN_12 Add Products in Cart",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -550,7 +550,7 @@ test("SN_12 Add Products in Cart",async()=>{
 })
 test("SN_13  Verify Product quantity in Cart",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -587,7 +587,7 @@ test("SN_13  Verify Product quantity in Cart",async()=>{
 })
 test("SN_14 Place Order: Register while Checkout",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -689,7 +689,7 @@ test("SN_14 Place Order: Register while Checkout",async()=>{
 })
 test("SN_15  Place Order: Register before Checkout",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -785,7 +785,7 @@ test("SN_15  Place Order: Register before Checkout",async()=>{
 })
 test("SN_16 Place Order: Login before Checkout",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -861,7 +861,7 @@ test("SN_16 Place Order: Login before Checkout",async()=>{
 })
 test("SN_17 Remove Products From Cart",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -898,7 +898,7 @@ await test.step("Verify that product is removed from the cart",async()=>{
 })
 test("SN_18 View Category Products",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
    })
@@ -935,7 +935,7 @@ test("SN_18 View Category Products",async()=>{
 })
 test("SN_19 View & Cart Brand Products",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
@@ -973,7 +973,7 @@ test("SN_19 View & Cart Brand Products",async()=>{
 })
 test("SN_20 Search Products and Verify Cart After Login",async()=>{
    await test.step("User creates a context",async()=>{
-      browser=await chromium.launch({headless:false});
+      browser=await chromium.launch({headless:true});
       context= await browser.newContext();
       page=await context.newPage();
     })
